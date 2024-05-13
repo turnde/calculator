@@ -1,12 +1,107 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Calculator</title>
-</head>
-<body>
-    <h1>Calculator</h1>
-</body>
+  </head>
+  <body>
+    <!-- Calculator  -->
+    <div class="calculator d-flex">
+      <main>
+        <header>
+          <nav class="d-flex justify-between">
+            <div>
+              <button class="nav-icon">
+                <i class="fa-solid fa-bars"></i>
+              </button>
+              <span>Standard</span>
+              <button class="nav-icon">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </button>
+            </div>
+            <button id="" class="nav-icon">
+              <i class="fa-solid fa-clock-rotate-left"></i>
+            </button>
+          </nav>
+          <div id="screen">0</div>
+          <div class="d-flex link-group">
+            <button class="link-btn disabled" id="MC">MC</button>
+            <button class="link-btn disabled" id="MR">MR</button>
+            <button class="link-btn link-highlight" id="M+">M+</button>
+            <button class="link-btn link-highlight" id="M-">M-</button>
+            <button class="link-btn link-highlight" id="MS">MS</button>
+          </div>
+        </header>
+
+        <div class="button-group">
+          <div class="grid-col-4">
+            <button class="btn" id="divide">
+              <i class="fa-solid fa-percent"></i>
+            </button>
+            <button class="btn" id="clearEntry">Ce</button>
+            <button class="btn" id="clear">C</button>
+            <button class="btn" id="delete">
+              <i class="fa-solid fa-delete-left"></i>
+            </button>
+          </div>
+          <div class="grid-col-4">
+            <button class="btn">1/x</button>
+            <button class="btn">x <sup>2</sup></button>
+            <button class="btn">
+              <i class="fa-solid fa-square-root-variable"></i>
+            </button>
+            <button class="btn"><i class="fa-solid fa-divide"></i></button>
+          </div>
+          <div class="grid-col-4">
+            <button class="btn number-btn">7</button>
+            <button class="btn number-btn">8</button>
+            <button class="btn number-btn">9</button>
+
+            <button class="btn"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+          <div class="grid-col-4">
+            <button class="btn number-btn">4</button>
+            <button class="btn number-btn">5</button>
+            <button class="btn number-btn">6</button>
+            <button class="btn"><i class="fa-solid fa-minus"></i></button>
+          </div>
+          <div class="grid-col-4">
+            <button class="btn number-btn">1</button>
+            <button class="btn number-btn">2</button>
+            <button class="btn number-btn">3</button>
+            <button class="btn"><i class="fa-solid fa-plus"></i></button>
+          </div>
+
+          <div class="grid-col-4">
+            <button class="btn number-btn">
+              <i class="fa-solid fa-plus-minus"></i>
+            </button>
+            <button class="btn number-btn">0</button>
+            <button class="btn number-btn">.</button>
+            <button class="btn highlight-btn">
+              <i class="fa-solid fa-equals"></i>
+            </button>
+          </div>
+        </div>
+      </main>
+      <!-- Calculator History  -->
+      <div id="previous">
+        <nav class="d-flex">
+          <div class="history active">
+            History
+            <hr />
+          </div>
+          <div class="memory">
+            Memory
+            <hr />
+          </div>
+        </nav>
+        There's no history yet.
+      </div>
+    </div>
+  </body>
 </html>
