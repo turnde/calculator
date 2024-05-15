@@ -1,0 +1,115 @@
+:root {
+    --highlight: rgb(92, 190, 255);
+    --highlight-hover: rgba(92, 190, 255, 0.9);
+    --light-gray: rgb(221, 221, 221);
+    --gray: gray;
+    --dark-gray: rgb(35, 35, 35);
+    --lighten-10: rgba(255, 255, 255, 0.1);
+    --lighten-15: rgba(255, 255, 255, 0.15);
+    --fs-h1: clamp(3rem, 2.5652rem + 2.1739vh, 4.25rem);
+    --fs-h3: clamp(1.25rem, 1.0326rem + 1.087vh, 1.875rem);
+    --fs-sm: 0.6rem;
+    --border-radius: 5px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+main {
+    width: 75vw;
+}
+
+.grid-col-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+header {
+    height: 27vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.button-group {
+    height: 73vh;
+    display: grid;
+}
+
+#screen {
+    margin-left: auto;
+    font-family: 'Seven Segment', sans-serif;
+    font-size: var(--fs-h1);
+}
+.link-group button {
+    margin-right: 10px; /* Adjust the value as needed */
+}
+.calculator {
+    background-color: var(--dark-gray);
+    color: var(--light-gray);
+}
+
+.nav-icon {
+    background-color: transparent;
+    border: none;
+    padding: 0.4rem;
+}
+
+button {
+    color: var(--light-gray);
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    font-size: var(--fs-h3);
+    margin: 0.3px;
+}
+
+.btn {
+    background-color: var(--lighten-10);
+    color: var(--light-gray);
+}
+
+.btn:hover {
+    background-color: var(--lighten-15);
+}
+
+.link-btn {
+    background-color: transparent;
+    border: none;
+}
+
+.highlight-btn {
+    background-color: var(--highlight);
+    color: var(--dark-gray);
+}
+
+.highlight-btn:hover {
+    background-color: var(--highlight-hover);
+}
+
+.number-btn {
+    background-color: var(--lighten-15);
+}
+
+.number-btn:hover {
+    background-color: var(--lighten-10);
+}
+
+@media (max-width: 768px) {
+    main {
+        width: 100vw;
+    }
+
+    #previous {
+        display: none;
+    }
+}
